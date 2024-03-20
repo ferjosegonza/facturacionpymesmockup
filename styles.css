@@ -1,3 +1,18 @@
-.pageScreen {
-    max-width: 500px;
+/* Estilos comunes para las páginas */
+.page {
+    display: none;
+    padding: 20px;
+}
+
+/* Estilos específicos para cada pantalla */
+#pantallaUno .proyectos {
+    /* Estilos para los botones de proyectos */
+}
+
+#pantallaDos #listadoGastos {
+    /* Estilos para el listado de gastos */
+}
+
+#pantallaTres #formularioGasto {
+    /* Estilos para el formulario de registro de gasto */
 }
