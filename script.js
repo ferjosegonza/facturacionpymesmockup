@@ -1,30 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Mostrar Pantalla Uno por defecto
-    mostrarPantalla('pantallaUno');
+    // Generar el listado de proyectos ficticios
+    var proyectos = [
+        { nombre: "Proyecto 1", tiempoRestante: "5 días", dineroConsumido: "$1000" },
+        { nombre: "Proyecto 2", tiempoRestante: "10 días", dineroConsumido: "$1500" },
+        { nombre: "Proyecto 3", tiempoRestante: "2 días", dineroConsumido: "$800" }
+    ];
 
-    // Event listener para hacer clic en un proyecto y mostrar los gastos
-    document.querySelectorAll('.proyecto').forEach(function(proyecto) {
-        proyecto.addEventListener('click', function() {
+    var proyectosContainer = document.querySelector('.proyectos');
+
+    proyectos.forEach(function(proyecto) {
+        var enlace = document.createElement('a');
+        enlace.textContent = proyecto.nombre + ' (Tiempo restante: ' + proyecto.tiempoRestante + ', Dinero consumido: ' + proyecto.dineroConsumido + ')';
+        enlace.href = '#';
+        enlace.addEventListener('click', function() {
             mostrarPantalla('pantallaDos');
-            // Aquí se cargaría dinámicamente el listado de gastos del proyecto seleccionado
+            // Aquí puedes realizar acciones adicionales al hacer clic en un proyecto, como cargar el listado de gastos del proyecto seleccionado.
         });
-    });
-
-    // Event listener para el botón "Registrar Gasto" en Pantalla Dos
-    document.getElementById('registrarGastoBtn').addEventListener('click', function() {
-        mostrarPantalla('pantallaTres');
-    });
-
-    // Event listener para el botón "Volver" en Pantalla Tres
-    document.getElementById('volverPantallaDosBtn').addEventListener('click', function() {
-        mostrarPantalla('pantallaDos');
+        proyectosContainer.appendChild(enlace);
+        proyectosContainer.appendChild(document.createElement('br')); // Agrega un salto de línea entre cada enlace
     });
 });
-
-// Función para mostrar una pantalla y ocultar las demás
-function mostrarPantalla(pantallaId) {
-    document.querySelectorAll('.page').forEach(function(pantalla) {
-        pantalla.style.display = 'none';
-    });
-    document.getElementById(pantallaId).style.display = 'block';
-}
