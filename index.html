@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Mockup</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<!-- Start of Pantalla Uno -->
+<div data-role="page" id="pantallaUno">
+
+    <div data-role="header">
+        <h1>Listado de Proyectos</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <!-- Listado de proyectos -->
+    </div><!-- /content -->
+
+    <div data-role="footer">
+        <h4>Proyectos</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of Pantalla Dos -->
+<div data-role="page" id="pantallaDos">
+
+    <div data-role="header">
+        <h1>Registro de Gastos</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <!-- Aquí va el listado de gastos -->
+        <a href="#pantallaTres" class="ui-btn">Registrar Gasto</a>
+        <a href="#pantallaUno" class="ui-btn">Volver</a>
+    </div><!-- /content -->
+
+    <div data-role="footer">
+        <h4>Gastos</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of Pantalla Tres -->
+<div data-role="page" id="pantallaTres">
+
+    <div data-role="header">
+        <h1>Detalle de Gastos</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <!-- Formulario para registrar gasto -->
+        <form id="formularioGasto">
+            <div class="ui-field-contain">
+                <label for="proveedor">Proveedor:</label>
+                <select name="proveedor" id="proveedor">
+                    <!-- Opciones de proveedores -->
+                </select>
+            </div>
+            <div class="ui-field-contain">
+                <label for="factura">Factura Número:</label>
+                <input type="text" name="factura" id="factura">
+            </div>
+            <button type="submit" class="ui-btn">Registrar Gasto</button>
+            <a href="#pantallaDos" class="ui-btn">Volver</a>
+        </form>
+    </div><!-- /content -->
+
+    <div data-role="footer">
+        <h4>Detalle de Gastos</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of Modal para Proveedor Nuevo -->
+<div id="modalProveedorNuevo" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <!-- Contenido del modal para proveedor nuevo -->
+    </div>
+</div><!-- /modal -->
+
+</body>
+</html>
