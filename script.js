@@ -16,3 +16,9 @@ function volverListadoProyectos() {
     document.getElementById('listado_gasto').style.display = 'none';
     document.getElementById('registrar_gasto').style.display = 'none';
 }
+
+function volverListadoGastos() {
+    document.getElementById('listado_proyectos').style.display = 'none';
+    document.getElementById('listado_gasto').style.display = 'block';
+    document.getElementById('registrar_gasto').style.display = 'none';
+}

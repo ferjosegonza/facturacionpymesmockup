@@ -171,6 +171,11 @@ h3, .gasto-info h5 {
 	display: none;
 }
 
+.inline{
+	display: flex;
+	flex-direction: row;
+}
+
 @media screen and (max-width: 767px) {
     .proyecto-info {
         width: calc(100% - 20px);

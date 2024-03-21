@@ -213,7 +213,7 @@
 	</div>
 
 	<div data-role="page" id="registrar_gasto" data-theme="a">
-		<div class="gasto-info" onclick="mostrarDetalle(4)">
+		<div class="gasto-info">
 			<div class="gasto-info gasto-info-titulo">
 				<h5>Agregar Gasto al Proyecto <span id="agregar-gasto-id"></span></h5>
 			</div>
@@ -221,30 +221,55 @@
 			<div class="table-container table-gasto">
 				<table>
 					<tr>
-						<td>Proveedor</td><td>Proveedor Genérico</td>
+						<td class="inline">Proveedor</td><td>
+							<select name="proveedor_select" id="proveedor_select">
+								<option value="1">Proveedor 1</option>
+								<option value="2">Proveedor 2</option>
+								<option value="3">Proveedor 3</option>
+							</select>
+							<button type="button" class="btn btn-success">Nuevo</button>
+						</td>
 					</tr>
 					<tr>
-						<td>Factura Número</td><td>65163212</td>
+						<td>Factura Número</td><td><input type="text" name="factura" id="factura"></td>
 					</tr>
 					<tr>
-						<td>Fecha</td><td>15/05/2022</td>
+						<td>Fecha</td><td><input type="date" name="fecha" id="fecha"></td>
 					</tr>
 					<tr>
-						<td>Monto colones</td><td></td>
+						<td>Monto colones</td><td><input type="number" name="monto" id="monto"></td>
 					</tr>
 					<tr>
-						<td>Tipo Gasto</td><td></td>
+						<td>Tipo Gasto</td><td>
+							<select name="tipo_gasto" id="tipo_gasto">
+								<option value="1">tipo_gasto 1</option>
+								<option value="2">tipo_gasto 2</option>
+								<option value="3">tipo_gasto 3</option>
+							</select></td>
 					</tr>
 					<tr>
-						<td>Nota</td><td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+						<td>Nota</td><td><input type="text" name="nota" id="nota"></td>
 					</tr>
 					<tr>
-						<td>Proyecto Destino</td><td>Proyecto Destino Genérico</td>
+						<td>Proyecto Destino</td><td>
+							<select name="proyecto_destino" id="proyecto_destino">
+								<option value="1">Proyecto Destino 1</option>
+								<option value="2">Proyecto Destino 2</option>
+								<option value="3">Proyecto Destino 3</option>
+							</select>
+						</td>
 					</tr>
 					<tr>
-						<td>Estado del Gasto</td><td>Pendiente de Pago</td>
+						<td>Estado del Gasto</td><td>
+							<select name="estado_gasto" id="estado_gasto">
+								<option value="1">Pendiente de Pago</option>
+								<option value="2">Pagado Parcialmente</option>
+								<option value="3">Pagado</option>
+							</select></td>
 					</tr>
 				</table>
+				<button type="button" onclick="agregarGasto()" class="btn btn-warning btn-sm">Agregar Gasto</button>
+				<button type="button" onclick="volverListadoGastos()" class="btn btn-secondary btn-sm">Volver</button>
 			</div>
 
 			<div data-role="footer" data-position="fixed" style="background-color: #2d92be;">
