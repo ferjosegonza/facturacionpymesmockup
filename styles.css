@@ -1,179 +1,112 @@
-/* Estilos para dispositivos móviles */
-
-
-body{
-	background-color: #eceff4;
-	font-family: sans-serif;
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-weight: 300;
+	font-style: normal;
+    margin: 0;
+	font-family: 'Poppins', sans-serif;
 }
 
-.container{
-	background-color: #2d92be;
-	max-width: 800px;
+header {
+	background-color: #eceff4;
+	justify-content: space-around;
+	font-family: 'Poppins', sans-serif;
+	position: fixed;
 	width: 100%;
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.container h2 {
-	color: white;
-}
-
-.link-proyecto-info {
-	text-decoration: none; /* Eliminar la decoración de subrayado del enlace */ 
-	color: #333; /* Color de texto por defecto */
-	background-color: #fff; /* Color de fondo por defecto */
-	padding: 10px; /* Espaciado interno */
-	display: inline-block; /* Hacer que el enlace se comporte como un bloque en línea */
-	transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
-	border-radius: 10px;
-}
-
-#listado_proyectos_titulo {
-	margin: 15px;
-}
-
-.proyecto-info {
-	display: flex;
-	flex-wrap:  wrap; /* Que los elementos queden en varias filas si no caben todos en una sola fila */
-	justify-content: space-around; /* Justificar el contenido horizontalmente con espacio entre las cajas */
-	margin: 10px;
-	/* width: calc(50% - 20px); */
-}
-
-.info {
-	flex: 1 1 400px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-}
-
-.table-container {
-	flex: 1 1 300px;
-	background-color: #eceff4;
-}
-
-.table-container th, .table-container td {
-	border: 1px solid black;
-	padding: 8px;
-	text-align: left;
-}
-
-.table-container th {
-	background-color: #f2f2f2;
-}
-
-.link-proyecto-info:hover {
-	background-color: #f0f0f0; /* Cambiar el color de fondo cuando el mouse pasa por encima */
-	cursor: pointer;
+	padding: 35px;
+	
 }
 
 .titulo {
-	background-color: #eceff4;
-	font-weight: bold;
-	padding: 6px;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-top: #2d92be solid 5px;
-	max-width: 800px;
+    background-color: #eceff4;
+    color: #1A1B1E;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+h3, h4, h5 {
+	font-family: 'Poppins', sans-serif;
 }
 
 .titulo_texto {
-	margin-left: 10px;
-	font-family: sans-serif;
-	font-size: 15PX;
+    margin-left: 10px;
+    font-size: 1.2rem;
+	font-family: 'Poppins', sans-serif;
 }
 
-/* #listado_proyectos, #listado_gasto, #registrar_gasto{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-} */
-
-h3{
-	text-align: center;
+.container {
+	background-color: #f9f9f9;
+    max-width: 800px;
+    margin: auto;
+	font-family: 'Poppins', sans-serif;
+    padding: 20px;
+	padding-top: 90px;
 }
 
-h3, .gasto-info h5 {
-	color: #eceff4;
-	text-align: center;
+.proyecto-info {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.gasto-info h5 {
-	margin: 15px 0 0 0;
-}
-.gasto-info {
-	margin: 0 0 30px 0;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.proyecto-info:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-.gasto-info-titulo {
-	display: flex; /* Usa flexbox para los elementos hijos */
-	justify-content: space-around; /* Distribuye los elementos de manera uniforme a lo largo del eje principal */
-	align-items: center; /* Centra verticalmente los elementos */
-	margin: 10px;
-	padding: 5px;
-	display: inline-block;
+.link-proyecto-info {
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-.gasto-info-titulo > button{
-	margin-top: 5px;
+.link-proyecto-info:hover {
+    background-color: #f0f0f0;
 }
 
-.table-gasto{
-	font-size: 0.9em;
-	max-width: 90%;
-	align-self: center;
-	display: inline-block; /* Hacer que el div sea un bloque en línea */
-	text-align: left; /* Alinear el contenido de la tabla a la izquierda */
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 7px;
+.table-container {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+	font-family: 'Poppins', sans-serif;
 }
 
-.table-gasto th, .table-gasto td {
-	border: 0.5px solid white;
-	text-align: left;
-	padding: 2px;
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+	font-family: 'Poppins', sans-serif;
 }
 
-.gasto-info-titulo h4 {
-	margin: 0; /* Elimina el margen del encabezado */
+.table-container th, .table-container td {
+    border: 1px solid #ccc;
+    padding: 8px;
 }
 
-#registrar_gasto {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-}
-
-/* Estilos para el contenido */
-.gasto-info {
-	flex-grow: 1;
-}
-
-/* Estilos para el footer */
 .footer {
-	flex-shrink: 0; /* Evita que el footer se encoja */
-	background-color: #2d92be;
-	color: white;
-	text-align: center;
-	padding: 10px;
+    background-color: #b3b8ba;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 #listado_gasto, #registrar_gasto{
 	display: none;
 }
 
-.inline{
-	display: flex;
-	flex-direction: row;
+.botones_agregar_gasto{
+	display: inline;
+	justify-content: space-around;
+}
+
+.botones_agregar_gasto button{
+	margin-top: 20px;
 }
 
 @media screen and (max-width: 767px) {
