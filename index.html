@@ -118,13 +118,17 @@
 
 	<div data-role="page" id="listado_gasto" data-theme="a">
 		<div class="gasto-info">
-			<div class="gasto-info gasto-info-titulo">
+			<div class="gasto-info gasto-info-titulo centrar">
 				<h5>Listado de Gastos del Proyecto <span id="gasto-id"></span></h5>
-				<button type="button" onclick="agregarGasto()" class="btn btn-outline-primary">Agregar Gasto</button>
-				<button type="button" onclick="volverListadoProyectos()" class="btn btn-outline-secondary">Volver</button>
+				<div>
+					<button type="button" onclick="volverListadoProyectos()" class="btn btn-outline-secondary btn-block">Volver</button>
+				</div>
+				<div>
+					<button type="button" onclick="agregarGasto()" class="btn btn-outline-primary btn-block">Agregar Gasto</button>
+				</div>
 			</div>
 
-			<div class="table-container table-gasto">
+			<div class="table-container table-gasto" id="listado_gasto_interno">
 				<table>
 					<tr>
 						<td>Proveedor</td><td>Proveedor Genérico</td>
@@ -221,17 +225,62 @@
 			</div>
 
 			<div class="table-container table-gasto">
+				<div class="row mb-3">
+					<label for="proveedor_select" class="col-sm-2 col-form-label">Proveedor</label>
+					<div class="col-sm-10">
+						<select class="form-select" id="proveedor_select">
+							<option value="1">Proveedor 1</option>
+							<option value="2">Proveedor 2</option>
+							<option value="3">Proveedor 3</option>
+						</select>
+						<small id="inputProveedorHelp" class="form-text text-muted">Si no encuentra el proveedor haga clic en el botón.</small>
+						<!-- AGREGAR BOTON REDONDO CON EL SIGNO "MÁS" +  -->
+					</div>
+				</div>
+				<div class="col-md-4">
+					<label for="inputState" class="form-label">State</label>
+					<select id="inputState" class="form-select">
+					  <option selected>Choose...</option>
+					  <option>...</option>
+					</select>
+				<div class="col-md-4">
+					<label for="factura" class="col-sm-2 col-form-label">Factura Número</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="factura">
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label for="fecha" class="col-sm-2 col-form-label">Fecha</label>
+					<div class="col-sm-10">
+						<input type="date" class="form-control" id="fecha">
+					</div>
+				</div>
+				<form>
+					<div class="row mb-3">
+
+					</div>
+					<div class="form-group">
+						<label for="proveedor_select" class="col-sm-2 col-form-label">Proveedor</label>
+						<input type="email" class="form-control" id="inputProveedor" aria-describedby="inputProveedorHelp" placeholder="Seleccione Proveedor">
+						
+					</div>
+					<div class="form-group">
+						<label for="inputProveedor">Seleccione Proveedor</label>
+						<select class="form-control" id="inputProveedor">
+							<option value="1">Proveedor 1</option>
+							<option value="2">Proveedor 2</option>
+							<option value="3">Proveedor 3</option>
+						</select>
+						
+					  </div>
+					<div class="form-check">
+						<input type="checkbox" class="form-check-input" id="exampleCheck1">
+						<label class="form-check-label" for="exampleCheck1">Check me out</label>
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				  </form>
 				<table>
-					<tr>
-						<td class="inline">Proveedor</td><td>
-							<select name="proveedor_select" id="proveedor_select">
-								<option value="1">Proveedor 1</option>
-								<option value="2">Proveedor 2</option>
-								<option value="3">Proveedor 3</option>
-							</select>
-							<button type="button" class="btn btn-success">Nuevo</button>
-						</td>
-					</tr>
+
 					<tr>
 						<td>Factura Número</td><td><input type="text" name="factura" id="factura"></td>
 					</tr>
@@ -270,10 +319,17 @@
 							</select></td>
 					</tr>
 				</table>
-				<div class="botones_agregar_gasto">
-					<button type="button" onclick="agregarGasto()" class="btn btn-outline-primary">Confirmar Gasto</button>
-					<button type="button" onclick="volverListadoGastos()" class="btn btn-outline-secondary">Volver</button>
+				<div class="centrar-vertical">
+					<div>
+						<button type="button" onclick="volverListadoGastos()" class="btn btn-outline-secondary btn-block">Volver</button>
+					</div>
+					<div>
+						<button type="button" onclick="agregarGasto()" class="btn btn-outline-primary btn-block">Confirmar Gasto</button>
+					</div>
 				</div>
+
+
+
 			</div>
 
 			<div data-role="footer" data-position="fixed">

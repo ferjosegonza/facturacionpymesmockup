@@ -86,6 +86,10 @@ h3, h4, h5 {
     padding: 8px;
 }
 
+.table-container > .table-gasto{
+	margin-top: 297px;
+}
+
 .footer {
     background-color: #b3b8ba;
     color: white;
@@ -100,6 +104,10 @@ h3, h4, h5 {
 	display: none;
 }
 
+#listado_gasto_interno, #registrar_gasto_interno {
+	/* padding-top: 150px; */
+}
+
 .botones_agregar_gasto{
 	display: inline;
 	justify-content: space-around;
@@ -109,8 +117,35 @@ h3, h4, h5 {
 	margin-top: 20px;
 }
 
-@media screen and (max-width: 767px) {
+.btn-block{
+	width: 100%;
+	margin: 10px 0;
+}
+
+.centrar{
+	align-content: space-around;
+	padding-top: 5px;
+	justify-content: center;
+	align-items: center;
+	/* display: flex; */
+}
+
+.gasto-info-titulo{
+	margin: 0;
+	padding: 0;
+	/* position: fixed; */
+	background-color: white;
+
+}
+
+.gasto-info{
+	background-color: white;
+	width: 100%;
+}
+
+
+/* @media screen and (max-width: 767px) {
     .proyecto-info {
         width: calc(100% - 20px);
     }
-}
+} */
