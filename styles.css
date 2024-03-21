@@ -1,8 +1,9 @@
 /* Estilos para dispositivos móviles */
 
+
 body{
 	background-color: #eceff4;
-	font-family: arial;
+	font-family: sans-serif;
 }
 
 .container{
@@ -11,6 +12,7 @@ body{
 	width: 100%;
 	margin: auto;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
@@ -26,6 +28,11 @@ body{
 	padding: 10px; /* Espaciado interno */
 	display: inline-block; /* Hacer que el enlace se comporte como un bloque en línea */
 	transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+	border-radius: 10px;
+}
+
+#listado_proyectos_titulo {
+	margin: 15px;
 }
 
 .proyecto-info {
@@ -44,6 +51,7 @@ body{
 
 .table-container {
 	flex: 1 1 300px;
+	background-color: #eceff4;
 }
 
 .table-container th, .table-container td {
@@ -56,13 +64,111 @@ body{
 	background-color: #f2f2f2;
 }
 
-#listado_gasto, #registrar_gasto{
-	display: none;
-}
-
 .link-proyecto-info:hover {
 	background-color: #f0f0f0; /* Cambiar el color de fondo cuando el mouse pasa por encima */
 	cursor: pointer;
+}
+
+.titulo {
+	background-color: #eceff4;
+	font-weight: bold;
+	padding: 6px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: #2d92be solid 5px;
+	max-width: 800px;
+}
+
+.titulo_texto {
+	margin-left: 10px;
+	font-family: sans-serif;
+	font-size: 15PX;
+}
+
+/* #listado_proyectos, #listado_gasto, #registrar_gasto{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} */
+
+h3{
+	text-align: center;
+}
+
+h3, .gasto-info h5 {
+	color: #eceff4;
+	text-align: center;
+}
+
+.gasto-info h5 {
+	margin: 15px 0 0 0;
+}
+.gasto-info {
+	margin: 0 0 30px 0;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.gasto-info-titulo {
+	display: flex; /* Usa flexbox para los elementos hijos */
+	justify-content: space-around; /* Distribuye los elementos de manera uniforme a lo largo del eje principal */
+	align-items: center; /* Centra verticalmente los elementos */
+	margin: 10px;
+	padding: 5px;
+	display: inline-block;
+}
+
+.gasto-info-titulo > button{
+	margin-top: 5px;
+}
+
+.table-gasto{
+	font-size: 0.9em;
+	max-width: 90%;
+	align-self: center;
+	display: inline-block; /* Hacer que el div sea un bloque en línea */
+	text-align: left; /* Alinear el contenido de la tabla a la izquierda */
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 7px;
+}
+
+.table-gasto th, .table-gasto td {
+	border: 0.5px solid white;
+	text-align: left;
+	padding: 2px;
+}
+
+.gasto-info-titulo h4 {
+	margin: 0; /* Elimina el margen del encabezado */
+}
+
+#registrar_gasto {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+/* Estilos para el contenido */
+.gasto-info {
+	flex-grow: 1;
+}
+
+/* Estilos para el footer */
+.footer {
+	flex-shrink: 0; /* Evita que el footer se encoja */
+	background-color: #2d92be;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+#listado_gasto, #registrar_gasto{
+	display: none;
 }
 
 @media screen and (max-width: 767px) {
