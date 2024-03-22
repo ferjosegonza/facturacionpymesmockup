@@ -8,7 +8,7 @@ body {
 	font-style: normal;
     margin: 0;
 	font-family: 'Poppins', sans-serif;
-    max-width: 450px;
+    max-width: 650px;
 }
 
 header {
@@ -41,7 +41,7 @@ h3, h4, h5 {
 
 .container {
 	background-color: #f9f9f9;
-    max-width: 800px;
+    max-width: 500px;
     margin: auto;
 	font-family: 'Poppins', sans-serif;
     padding: 20px;
@@ -163,6 +163,13 @@ h3, h4, h5 {
 .table-gasto{
     margin: 15px 0;
 }
+
+.item-gasto{
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+
 
 
 
