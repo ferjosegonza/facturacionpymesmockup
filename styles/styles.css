@@ -72,23 +72,27 @@ h3, h4, h5 {
     background-color: #f2f2f2;
     padding: 10px;
     border-radius: 5px;
-	font-family: 'Poppins', sans-serif;
+	
+    /* font-family: 'Poppins', sans-serif; */
+
+    width: 100%;
+    box-shadow: -5px 5px 3px rgba(0, 0, 0, 0.3);
+    overflow-x: auto;
 }
 
 .table-container table {
     width: 100%;
     border-collapse: collapse;
 	font-family: 'Poppins', sans-serif;
+    border-spacing: 0;
+    font-size: 0.9em;
 }
 
 .table-container th, .table-container td {
     border: 1px solid #ccc;
-    padding: 8px;
+    padding: 12px;
 }
 
-.table-container > .table-gasto{
-	margin-top: 297px;
-}
 
 .footer {
     background-color: #b3b8ba;
@@ -134,9 +138,8 @@ h3, h4, h5 {
 	margin: 0;
 	padding: 0;
 	/* position: fixed; */
-	background-color: white;
+	background-color: #f9f9f9;
     text-align: center;
-
 }
 
 .gasto-info{
@@ -155,6 +158,11 @@ h3, h4, h5 {
     
 }
 
+.table-gasto{
+    margin: 15px 0;
+}
+
+
 
 /* #listado_-tits_titulo{
     text-align: center;
@@ -166,4 +174,5 @@ h3, h4, h5 {
     .proyecto-info {
         width: calc(100% - 20px);
     }
-} */
+}
+*/

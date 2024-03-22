@@ -23,6 +23,13 @@ function volverListadoGastos() {
     document.getElementById('registrar_gasto').style.display = 'none';
 }
 
-function elegirTipo(moneda) {
-    
+const monedaRadio = document.getElementsByName('moneda');
+const monedaSimbolo = document.getElementById('monedaSimbolo');
+
+function actualizarMonedaSimbolo() {
+    const monedaSeleccionada = document.querySelector('input[name="moneda"]:checked');
+    monedaSimbolo.textContent = monedaSeleccionada.value === 'colones' ? '₡' : '$';
 }
+
+actualizarMonedaSimbolo();
+monedaRadio.forEach((radio) => radio.addEventListener('change', actualizarMonedaSimbolo));
