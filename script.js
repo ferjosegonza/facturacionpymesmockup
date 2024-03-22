@@ -12,6 +12,7 @@ function agregarGasto() {
     document.getElementById('listado_proyectos').style.display = 'none';
     document.getElementById('listado_gasto').style.display = 'none';
     document.getElementById('registrar_gasto').style.display = 'block';
+    cargarFecha();
     document.getElementById('modalNuevoProveedor').style.display = 'none';
     // document.getElementById('agregar-gasto-id').textContent = ;
 }
@@ -64,4 +65,9 @@ function actualizarContador() {
     var longitudActual = textarea.value.length;
     var caracteresRestantes = maxLength - longitudActual;
     contador.innerHTML = caracteresRestantes + " caracteres restantes";
+}
+
+function cargarFecha() {
+    const fechaActual = new Date().toISOString().split('T')[0];
+    document.getElementById('fecha').value = fechaActual;
 }
