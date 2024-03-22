@@ -249,7 +249,9 @@
 				<div class="row mb-2">
 					<label for="nota" class="col-sm-12 col-form-label">Nota</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="nota">
+						<!--<input type="textarea" class="form-control" id="nota" maxlength="150" style="height: 100px;">-->
+						<textarea class="form-control" id="nota" maxlength="150" oninput="actualizarContador()"></textarea>
+						<small id="contador">150 caracteres restantes</small>
 					</div>
 				</div>
 

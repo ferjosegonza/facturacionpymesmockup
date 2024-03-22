@@ -56,3 +56,12 @@ function abrirModalNuevoProveedor() {
 
     modal.show();
 }
+
+function actualizarContador() {
+    var textarea = document.getElementById("nota");
+    var contador = document.getElementById("contador");
+    var maxLength = textarea.maxLength;
+    var longitudActual = textarea.value.length;
+    var caracteresRestantes = maxLength - longitudActual;
+    contador.innerHTML = caracteresRestantes + " caracteres restantes";
+}
