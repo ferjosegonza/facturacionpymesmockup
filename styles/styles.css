@@ -7,6 +7,7 @@ body {
 	font-style: normal;
     margin: 0;
 	font-family: 'Poppins', sans-serif;
+    max-width: 450px;
 }
 
 header {
@@ -104,7 +105,7 @@ h3, h4, h5 {
     width: 100%;
 }
 
-#listado_gasto, #registrar_gasto{
+#listado_gasto, #registrar_gasto, #modalNuevoProveedor{
 	display: none;
 }
 

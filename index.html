@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <link rel="stylesheet" href="styles/styles.css">
-	<link rel="stylesheet" href="styles/rotating_icon_buttons.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -189,7 +188,7 @@
 								<option value="2">Proveedor 2</option>
 								<option value="3">Proveedor 3</option>
 							</select>
-							<a href="">
+							<a href="#" onclick="abrirModalNuevoProveedor()">
 								<img src="images/icons8-añadir-32.png" alt="Boton añadir proveedor">
 							</a>
 						</div>
@@ -279,6 +278,14 @@
 					</div>
 				</div>
 
+				<div class="row mb-2">
+					<label for="archivo" class="col-sm-2 col-form-label">Adjuntar al gasto</label>
+					<div class="col-sm-10">
+						<input type="file" class="form-control" id="archivo" accept="image/*, .pdf">
+						<small id="archivoHelp" class="form-text text-muted">Seleccione una imagen o PDF para adjuntar.</small>
+					</div>
+				</div>
+
 				<div class="centrar-vertical">
 					<div>
 						<button type="button" onclick="volverListadoGastos()" class="btn btn-outline-secondary btn-block">Volver</button>
@@ -297,6 +304,36 @@
 		</div>
 	</div>
 </main>
+
+	<!-- Modal para agregar nuevo proveedor -->
+    <div class="modal" id="modalNuevoProveedor">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Encabezado del modal -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar Nuevo Proveedor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Cuerpo del modal -->
+                <div class="modal-body">
+                    <!-- Formulario para agregar nuevo proveedor -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombreProveedor" class="form-label">Nombre del Proveedor</label>
+                            <input type="text" class="form-control" id="nombreProveedor" placeholder="Ingrese el nombre del proveedor">
+                        </div>
+                    </form>
+                </div>
+                <!-- Pie del modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntX5" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </body>
 </html>
