@@ -135,6 +135,7 @@ h3, h4, h5 {
 	padding: 0;
 	/* position: fixed; */
 	background-color: white;
+    text-align: center;
 
 }
 
@@ -143,6 +144,23 @@ h3, h4, h5 {
 	width: 100%;
 }
 
+.select-con-boton, .proyectos-titulo{
+    display: flex;
+    flex-direction: row;
+}
+
+.proyectos-titulo{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+/* #listado_-tits_titulo{
+    text-align: center;
+    margin: 0;
+	padding: 0;
+} */
 
 /* @media screen and (max-width: 767px) {
     .proyecto-info {
