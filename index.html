@@ -189,7 +189,10 @@
 								<option value="2">Proveedor 2</option>
 								<option value="3">Proveedor 3</option>
 							</select>
-							<a href="#" onclick="abrirModalNuevoProveedor()">
+							<!--<a href="#" onclick="abrirModalNuevoProveedor()" data-bs-toggle="modal" data-bs-target="#modalNuevoProveedor">
+								<img src="images/icons8-añadir-32.png" alt="Boton añadir proveedor">
+							</a>-->
+							<a href="#" data-bs-toggle="modal" data-bs-target="#modalNuevoProveedor">
 								<img src="images/icons8-añadir-32.png" alt="Boton añadir proveedor">
 							</a>
 						</div>
@@ -308,35 +311,34 @@
 	</div>
 </main>
 
-	<!-- Modal para agregar nuevo proveedor -->
-    <div class="modal" id="modalNuevoProveedor">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- Encabezado del modal -->
-                <div class="modal-header">
-                    <h5 class="modal-title">Agregar Nuevo Proveedor</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!-- Cuerpo del modal -->
-                <div class="modal-body">
-                    <!-- Formulario para agregar nuevo proveedor -->
-                    <form>
-                        <div class="mb-3">
-                            <label for="nombreProveedor" class="form-label">Nombre del Proveedor</label>
-                            <input type="text" class="form-control" id="nombreProveedor" placeholder="Ingrese el nombre del proveedor">
-                        </div>
-                    </form>
-                </div>
-                <!-- Pie del modal -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntX5" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<!-- Modal para agregar nuevo proveedor 
+    <div class="modal" id="modalNuevoProveedor">-->
+	<div class="modal fade" id="modalNuevoProveedor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Nuevo Proveedor</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="mb-3">
+						<label for="nombreProveedor" class="form-label">Nombre del Proveedor</label>
+						<input type="text" class="form-control" id="nombreProveedor" placeholder="Ingrese el nombre del proveedor">
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-secondary btn-block" data-bs-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-outline-primary btn-block">Guardar</button>
+				<!-- <button type="button" class="btn btn-outline-secondary btn-block" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-outline-primary btn-block">Guardar</button> -->
+			</div>
+			</div>
+		</div>
+		</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	
 <script src="script.js"></script>
 </body>
 </html>
