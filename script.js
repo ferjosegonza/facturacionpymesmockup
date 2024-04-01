@@ -70,4 +70,23 @@ function actualizarContador() {
 function cargarFecha() {
     const fechaActual = new Date().toISOString().split('T')[0];
     document.getElementById('fecha').value = fechaActual;
+    document.getElementById('fecha').setAttribute('max', fechaActual);
 }
+
+function validarNumero() {
+    let input = document.getElementById("montoInput");
+    if (parseFloat(input.value) > 0) {
+        
+    } else {
+        input.value = "";
+        alert("No se permiten números negativos.");
+    }
+}
+
+// function fechaActual() {
+//     let inputFecha = document.getElementById("fecha");
+//     let fechaActual = new Date().toISOString().split('T'[0]);
+//     inputFecha.max = fechaActual;
+//     //alert(fechaActual);
+// //    return fechaActual;
+// }
